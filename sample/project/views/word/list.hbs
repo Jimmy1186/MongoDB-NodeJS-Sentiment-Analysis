@@ -1,0 +1,30 @@
+<h3>History</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>news_title</th>
+            <th>article</th>
+
+             <th>score</th>
+            <th>comparative</th>
+             <th>wordlist</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.news_title}}</td>
+            <td>{{this.article}}</td>
+            <td>{{this.score}}</td>
+            <td>{{this.comparative}}</td>
+            <td>{{this.wordlistP}}</td>
+
+            <td>
+                <a href="/word/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>Edit</a>
+                <a href="/word/delete/{{this._id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i>Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
